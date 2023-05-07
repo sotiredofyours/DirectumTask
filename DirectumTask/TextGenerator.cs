@@ -7,20 +7,22 @@ public class TextGenerator
     
     private readonly char[] _separators = {' ', '.', ',', '!', '?', ';'};
     private readonly List<string> _dictionary;
+    private readonly Random _rnd;
 
     public TextGenerator(List<string> dictionary)
     {
         _dictionary = dictionary;
+        _rnd = new Random();
     }
     
     private char PickSeparator()
     {
-        return _separators[new Random().Next(_separators.Length)];
+        return _separators[_rnd.Next(_separators.Length)];
     }
 
     private string PickWord()
     {
-        return _dictionary[new Random().Next(_dictionary.Count)];
+        return _dictionary[_rnd.Next(_dictionary.Count)];
     }
     
     public string GenerateText(int minWords, int maxWords)
