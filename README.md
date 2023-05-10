@@ -5,14 +5,20 @@ ___
 - .NET 7.0 
 
 ### 1. Клонирование репоризтория
-``git clone https://github.com/sotiredofyours``
+``git clone https://github.com/sotiredofyours/DirectumTask``
 
 ### 2. Установка зависимостей
+
+В корневой папке проекта:
+
 ``dotnet restore``
 
 ``dotnet restore-tools``
 
 ### 3. Запуск
+
+В корневой папке проекта:
+
 ``dotnet run --project DirectumTask``
 
 ## Настройки программы
